@@ -1,0 +1,13 @@
+{
+  "name": "places-backend-API",
+  "version": "0.0.1",
+  "description": "google maps places api.",
+  "main": "server.js",
+  "repository": "",
+  "author": "Neptune Cabelin <ncabelin@potentum.com>",
+  "dependencies": {
+    "cors": "^2.7.1",
+    "express": "^3.2.6",
+    "request": "^2.73.0"
+  }
+}
