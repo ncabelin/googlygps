@@ -51,6 +51,6 @@ app.get('/:zipcode', function(req, res) {
 });
 */
 
-app.listen(process.env.port || 8080, process.env.IP, function() {
+app.listen(process.env.PORT || 8080, function() {
   console.log('Started server...');
 });
