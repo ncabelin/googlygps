@@ -6,6 +6,7 @@ var request = require('request');
 var url = 'https://maps.googleapis.com/maps/api/geocode/json?address=';
 var key = '&key=AIzaSyAay9JvN_HdeAxzEtSKcIgQnrRvB6uuQZ8';
 
+/*
 app.use(function (req, res, next) {
 
     // Website you wish to allow to connect
@@ -24,12 +25,14 @@ app.use(function (req, res, next) {
     // Pass to next layer of middleware
     next();
 });
+*/
 
 app.get('/', function(req, res) {
   console.log('write');
   res.write('Please put zipcode on URL');
 });
 
+/*
 app.get('/:zipcode', function(req, res) {
   var zip = req.params.zipcode;
   var urlComplete = url + zip + key;
@@ -46,6 +49,7 @@ app.get('/:zipcode', function(req, res) {
     }
   });
 });
+*/
 
 app.listen(process.env.port || 8080, process.env.IP, function() {
   console.log('Started server...');
