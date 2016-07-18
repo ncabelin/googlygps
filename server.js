@@ -25,6 +25,11 @@ app.use(function (req, res, next) {
     next();
 });
 
+app.get('/', function(req, res) {
+  console.log('write');
+  res.write('Please put zipcode on URL');
+});
+
 app.get('/:zipcode', function(req, res) {
   var zip = req.params.zipcode;
   var urlComplete = url + zip + key;
@@ -42,6 +47,6 @@ app.get('/:zipcode', function(req, res) {
   });
 });
 
-app.listen(process.env.port || 8080, function() {
+app.listen(process.env.port || 8080, process.env.IP, function() {
   console.log('Started server...');
 });
